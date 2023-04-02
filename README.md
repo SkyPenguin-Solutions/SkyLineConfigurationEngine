@@ -1,2 +1,1 @@
-# SkyLineConfigurationEngine
-An open sourced configuration engine for the SkyLine programming language.
+![SLCBANNER](https://github.com/SkyPenguin-Solutions/SkyLineConfigurationEngine/blob/main/SLC.png?raw=true "Title")
