@@ -31,22 +31,22 @@ io.box(SLFILEIMPORT)
 Instead of calling `modify()` all over again you can use the configuration files and configuration language to auto load configuration files before the code is actually parsed or executed. The following example is of a modification file named **ModifyModule.SLMOD**
 
 ```rs
-ENGINE {
-    INIT {
-        constant DEFINE_CODE_MISSING_SEMICOLON = 12;
-        constant DEFINE_CODE_MISSING_LEFT_BRCE = 109;
-    
-        set depth_var := 0;
-        set basic_var := true;
-        set verbosity := true;
-        set debuglev  := true; 
-    
-        system|"errors"| -> modify[basic(true), verbosity(true), depth(0)];
-        system|"output"| -> modify[debug(debuglev)];
-        system|"import"| -> modify[expect("directories")];
-        system|"parser"| -> modify[DEFINE_CODE_MISSING_SEMICOLON, "Missing semicolon in statement"]
-        system|"parser"| -> modify[DEFINE_CODE_MISSING_LEFT_BRCE, "Sorry but I need a left bracket to finish the statement '}'"]
-    };
+ENGINE (true) {
+  INIT true {
+      constant PARSER_ERROR_MISSING_SEMICOLON_CODE        = 120;
+      constant PARSER_ERROR_MISSING_RIGHT_BRACKET_IN_UNIT = 122;
+      
+      set DebugValue   = true;
+      set RunnersValue = false;
+      set Color        = false;
+      set Verbose      = true;
+      set Output       = "tree";
+      set Depth        = 1;
+      
+      system("errors")  -> [Color, Verbose, Output];
+      system("parser")  -> [PARSER_ERROR_MISSING_RIGHT_BRACKET_IN_UNIT, "sorry, missing bracket in end to unit"];
+      system("output")  -> [Depth];
+  };
 };
 ```
 
@@ -61,3 +61,8 @@ set Calc = Func(x, y) {
     ret x - y;
 };
 ```
+
+an example of what the engine will output when running it normally will look like this 
+
+
+![SLCBANNER](?raw=true "SLC Output")
