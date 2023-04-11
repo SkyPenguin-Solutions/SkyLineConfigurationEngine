@@ -65,4 +65,4 @@ set Calc = Func(x, y) {
 an example of what the engine will output when running it normally will look like this 
 
 
-![SLCBANNER](?raw=true "SLC Output")
+![SLCBANNER](https://github.com/SkyPenguin-Solutions/SkyLineConfigurationEngine/blob/main/Screenshot%20from%202023-04-11%2000-01-30.png?raw=true "SLC Output")
