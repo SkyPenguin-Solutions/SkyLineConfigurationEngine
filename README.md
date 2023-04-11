@@ -2,7 +2,7 @@
 
 The SkyLine configuration engine is an engine designed to allow you to plugin SkyLine configuration files. This engine allows you to modify SkyLine's environment before code starts to get executed in your program. 
 
-### Why not standard configuration files?###
+### Why not standard configuration files? ###
 
 When looking at this engine you may ask "why". Well, while the developers could have chosen to used json, xml, yaml or even .setting/.conf files, our team chose to make something unique for the skyline language. The SkyLine Configuration Language will allow you to modify the internel environment and import them directly from the language itself. With both a parser, evaluator and lexer being super small with minimal tokens, it is bound to be lightweight.
 
