@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-func Start(Filename string) {
+func RunFile(Filename string) {
 
 	f, x := os.Open(Filename)
 	if x != nil {
