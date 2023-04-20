@@ -182,6 +182,8 @@ var LibrariesMap = map[string]bool{
 	"IoT/Roku/Database":   true,
 	"IoT/Google/Database": true,
 	"IoT/Amazon/Database": true,
+	"env": true,
+	
 }
 
 
