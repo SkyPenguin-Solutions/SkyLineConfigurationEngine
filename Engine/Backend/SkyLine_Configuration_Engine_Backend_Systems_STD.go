@@ -174,15 +174,16 @@ This map shows all active lists and systems that work with the libraries or all 
 */
 
 var LibrariesMap = map[string]bool{
-	"math":               true,
-	"io":                 true,
-	"http":               true,
-	"http/server":        true,
-	"forensics":          true,
-	"IoT/Apple/Database": true,
-	"IoT/Roku/ECP":       true,
-	"IoT/Apple":          true,
+	"math":                true,
+	"io":                  true,
+	"http":                true,
+	"forensics":           true,
+	"IoT/Apple/Database":  true,
+	"IoT/Roku/Database":   true,
+	"IoT/Google/Database": true,
+	"IoT/Amazon/Database": true,
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //			         										   ┏━━━━━
