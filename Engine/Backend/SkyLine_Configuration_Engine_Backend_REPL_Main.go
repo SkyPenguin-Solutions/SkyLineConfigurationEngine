@@ -9,7 +9,7 @@ import (
 	"os"
 )
 
-func Start(Filename string) {
+func Start(Filename string) (errors bool) {
 
 	f, x := os.Open(Filename)
 	if x != nil {
@@ -50,6 +50,9 @@ func Start(Filename string) {
 	program := parser.ParseProgram()
 	if len(parser.Errors()) > 0 {
 		log.Fatal(parser.Errors()[0])
+		errors = true
+	} else {
+		errors = false
 	}
 
 	Env := Start_Engine_Environment_Create()
@@ -61,4 +64,5 @@ func Start(Filename string) {
 	if x != nil {
 		log.Fatal(x)
 	}
+	return errors
 }
